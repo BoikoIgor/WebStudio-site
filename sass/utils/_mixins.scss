@@ -1,0 +1,18 @@
+@mixin container($centered: unset) {
+  width: 1200px;
+  padding: 0px 15px;
+  margin: 0 auto;
+  text-align: $centered;
+}
+@mixin centerFlex($centerFlex: flex) {
+  display: $centerFlex;
+  align-items: center;
+  justify-content: center;
+}
+// @mixin generateIcons($icons) {
+//   @each $icon in $icons {
+//     .icon-#{$icon} {
+//       background-image: url('../../images/#{$icon}.svg');
+//     }
+//   }
+// }

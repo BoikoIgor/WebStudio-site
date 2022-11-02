@@ -1,0 +1,112 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $third-background-color;
+  &__container {
+    @extend %container;
+    display: flex;
+    align-items: baseline;
+  }
+  &__contacts {
+    width: 226px;
+  }
+  &__list {
+    @extend %list;
+    margin-top: 20px;
+  }
+  &__address-link {
+    text-decoration: none;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $second-accent-color;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+  &__contacts-item {
+    margin-top: 9px;
+  }
+  &__contacts-link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.socials {
+  margin-left: 70px;
+  &__title {
+    @extend %footer-title;
+  }
+  &__list {
+    @extend %list;
+    min-width: 206px;
+    display: flex;
+    padding: 0;
+    margin-top: 0;
+    justify-content: space-between;
+  }
+  &__link {
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    fill: $second-accent-color;
+    & svg {
+      margin: 12px;
+    }
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+  }
+}
+.send-block {
+  margin-left: 93px;
+  &__title {
+    @extend %footer-title;
+  }
+  &__input {
+    padding: 15px;
+    min-width: 358px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+  }
+  & button {
+    display: inline-block;
+    min-width: 200px;
+    min-height: 50px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 5px;
+    margin-left: 12px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    background-color: $accent-color;
+    color: $second-accent-color;
+    fill: $second-accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  &__send-icon {
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+}

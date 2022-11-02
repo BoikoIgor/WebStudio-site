@@ -1,0 +1,90 @@
+.header {
+  border-bottom: 1px solid #ececec;
+
+  &__container {
+    @extend %container;
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav {
+    @extend %list;
+    display: flex;
+    margin-left: 93px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  &__link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $title-text-color;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      border-radius: 2px;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $accent-color;
+      opacity: 0;
+    }
+    &--current {
+      color: $accent-color;
+      &::after {
+        opacity: 1;
+      }
+    }
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      fill: $accent-color;
+    }
+  }
+
+  &__contacts {
+    @extend %list;
+    display: flex;
+    margin-left: auto;
+  }
+
+  &__contacts-item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    & + & {
+      margin-left: 30px;
+    }
+  }
+
+  &__contacts-link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $primary-text-color;
+    fill: $primary-text-color;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      fill: $accent-color;
+    }
+  }
+
+  &__contacts-icon {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+}

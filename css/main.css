@@ -504,8 +504,14 @@ img {
 }
 
 .clients, .team, .activities, .benefits {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .clients, .team, .activities, .benefits {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients__main-title, .team__main-title, .activities__title {
@@ -559,15 +565,52 @@ img {
 }
 
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 }
 .header__container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 .header__nav {
   display: flex;
   margin-left: 93px;
+}
+@media screen and (max-width: 767px) {
+  .header__nav {
+    display: none;
+  }
+}
+.header__menu-btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.header__icon-close {
+  display: none;
+}
+.header__menu-btn.is-open .header__icon-close {
+  display: block;
+}
+.header__menu-btn.is-open .header__icon-menu {
+  display: none;
+}
+.header__mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  height: 400px;
+  padding: 40px 48px;
+  text-align: left;
+}
+.header__mobile-menu.is-open {
+  display: block;
 }
 .header__item:not(:last-child) {
   margin-right: 50px;
@@ -605,16 +648,36 @@ img {
   color: #2196f3;
   fill: #2196f3;
 }
-.header__contacts {
-  display: flex;
-  margin-left: auto;
+@media screen and (max-width: 767px) {
+  .header__contacts {
+    display: none;
+  }
 }
-.header__contacts-item {
-  padding-top: 32px;
-  padding-bottom: 32px;
+@media screen and (max-width: 1199px) {
+  .header__contacts {
+    margin-left: auto;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contacts {
+    display: flex;
+    margin-left: auto;
+  }
 }
 .header__contacts-item + .header__contacts-item {
-  margin-left: 30px;
+  margin-top: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .header__contacts-item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .header__contacts-item + .header__contacts-item {
+    margin-left: 30px;
+    margin-top: 0;
+  }
 }
 .header__contacts-link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -689,6 +752,9 @@ img {
     flex-wrap: wrap;
   }
 }
+.benefits__item:not(:last-child) {
+  margin-bottom: 30px;
+}
 @media screen and (min-width: 768px) {
   .benefits__item {
     width: calc((100% - 30px) / 2);
@@ -743,6 +809,11 @@ img {
 .activities {
   padding-top: 0;
 }
+@media screen and (max-width: 1199px) {
+  .activities {
+    display: none;
+  }
+}
 .activities__list {
   display: flex;
 }
@@ -774,20 +845,25 @@ img {
 .team {
   background-color: #f5f4fa;
 }
-.team__list {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+  }
 }
 .team__card {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
+  margin-bottom: 30px;
 }
 .team__card:hover {
   transform: scale(1.2);
 }
-.team__card + .team__card {
-  margin-left: 30px;
+@media screen and (min-width: 1200px) {
+  .team__card + .team__card {
+    margin-left: 30px;
+  }
 }
 .team__content {
   text-align: center;
@@ -808,11 +884,16 @@ img {
 }
 
 .soc-icons {
+  padding: 0 122px;
   display: flex;
   margin-top: 16px;
-  padding-left: 27px;
-  padding-right: 27px;
   justify-content: space-between;
+}
+@media screen and (min-width: 1200px) {
+  .soc-icons {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
 }
 .soc-icons__link {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);

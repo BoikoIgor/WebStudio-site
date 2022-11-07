@@ -1,16 +1,52 @@
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 
   &__container {
     @extend %container;
+
     display: flex;
+    justify-content: space-between;
     align-items: center;
   }
 
   &__nav {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
     @extend %list;
     display: flex;
     margin-left: 93px;
+  }
+  &__menu-btn {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+  &__icon-close {
+    display: none;
+  }
+  .header__menu-btn.is-open &__icon-close {
+    display: block;
+  }
+  .header__menu-btn.is-open &__icon-menu {
+    display: none;
+  }
+  &__mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $background-color;
+    height: 400px;
+    padding: 40px 48px;
+    text-align: left;
+    &.is-open {
+      display: block;
+    }
   }
 
   &__item:not(:last-child) {
@@ -53,16 +89,32 @@
   }
 
   &__contacts {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
     @extend %list;
-    display: flex;
-    margin-left: auto;
+    @media screen and (max-width: 1199px) {
+      margin-left: auto;
+      padding-top: 21px;
+      padding-bottom: 21px;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      margin-left: auto;
+    }
   }
 
   &__contacts-item {
-    padding-top: 32px;
-    padding-bottom: 32px;
     & + & {
-      margin-left: 30px;
+      margin-top: 10px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      & + & {
+        margin-left: 30px;
+        margin-top: 0;
+      }
     }
   }
 

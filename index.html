@@ -11,6 +11,15 @@
     <header class="header">
       <nav class="header__container">
         <a class="logo" href="./index.html" lang="en" title="Web Studio"><span>Web</span>Studio</a>
+        <button type="button" class="header__menu-btn" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="header__icon-close" href="./images/sprite.svg#icon-close_40px"></use>
+            <use class="header__icon-menu" href="./images/sprite.svg#icon-menu"></use>          
+          </svg>
+        </button>
+        <div class="header__mobile-menu" id="mobile-menu" data-menu>
+          Контент меню
+        </div>
         <ul class="header__nav">
           <li class="header__item">
             <a class="header__link header__link--current" href="./index.html">Студія</a>
@@ -120,7 +129,7 @@
           <ul class="team__list">
             <li class="team__card">
               <div>
-                <img src="./images/members/member1.jpg" alt="фотографія: Ігор Дем'яненко" width="270" />
+                <img src="./images/members/member1.jpg" alt="фотографія: Ігор Дем'яненко" />
               </div>
               <div class="team__content">
                 <h3 class="team__title">Ігор Дем'яненко</h3>
@@ -159,7 +168,7 @@
             </li>
             <li class="team__card">
               <div>
-                <img src="./images/members/member2.jpg" alt="фотографія: Ольга Рєпіна" width="270" />
+                <img src="./images/members/member2.jpg" alt="фотографія: Ольга Рєпіна" />
               </div>
               <div class="team__content">
                 <h3 class="team__title">Ольга Рєпіна</h3>
@@ -198,7 +207,7 @@
             </li>
             <li class="team__card">
               <div>
-                <img src="./images/members/member3.jpg" alt="фотографія: Микола Тарасов" width="270" />
+                <img src="./images/members/member3.jpg" alt="фотографія: Микола Тарасов" />
               </div>
               <div class="team__content">
                 <h3 class="team__title">Микола Тарасов</h3>
@@ -237,7 +246,7 @@
             </li>
             <li class="team__card">
               <div>
-                <img src="./images/members/member4.jpg" alt="фотографія: Михайло Єрмаков" width="270" />
+                <img src="./images/members/member4.jpg" alt="фотографія: Михайло Єрмаков"/>
               </div>
               <div class="team__content">
                 <h3 class="team__title">Михайло Єрмаков</h3>
@@ -447,5 +456,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -1,4 +1,7 @@
 .activities {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
   @extend %section;
   padding-top: 0;
   &__container {

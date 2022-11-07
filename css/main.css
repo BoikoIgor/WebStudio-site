@@ -480,9 +480,23 @@ img {
 }
 
 .footer__container, .clients__container, .team__container, .activities__container, .benefits__container, .hero__container, .header__container {
-  width: 1200px;
   padding: 0px 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .footer__container, .clients__container, .team__container, .activities__container, .benefits__container, .hero__container, .header__container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__container, .clients__container, .team__container, .activities__container, .benefits__container, .hero__container, .header__container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container, .clients__container, .team__container, .activities__container, .benefits__container, .hero__container, .header__container {
+    width: 1200px;
+  }
 }
 
 .clients__container, .team__container, .activities__container, .hero {
@@ -668,17 +682,32 @@ img {
   background-color: #188ce8;
 }
 
-.benefits__list {
-  display: flex;
-  justify-content: space-between;
+@media screen and (min-width: 768px) {
+  .benefits__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
-.benefits__item {
-  width: calc((100% - 90px) / 4);
-  display: flex;
-  flex-direction: column;
+@media screen and (min-width: 768px) {
+  .benefits__item {
+    width: calc((100% - 30px) / 2);
+    display: flex;
+    flex-direction: column;
+  }
+  .benefits__item:nth-child(even) {
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
 }
-.benefits__item + .benefits__item {
-  margin-left: 30px;
+@media screen and (min-width: 1200px) {
+  .benefits__item {
+    width: calc((100% - 90px) / 4);
+  }
+  .benefits__item + .benefits__item {
+    margin-left: 30px;
+    margin-bottom: 0;
+  }
 }
 .benefits__icons {
   display: flex;
@@ -696,8 +725,14 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  text-align: center;
   text-transform: uppercase;
   color: #212121;
+}
+@media screen and (min-width: 768px) {
+  .benefits__title {
+    text-align: left;
+  }
 }
 .benefits__text {
   margin: 0;

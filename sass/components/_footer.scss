@@ -4,11 +4,24 @@
   background-color: $third-background-color;
   &__container {
     @extend %container;
-    display: flex;
-    align-items: baseline;
+    @extend %centerFlex;
+    flex-direction: column;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: baseline;
+      text-align: left;
+    }
   }
   &__contacts {
     width: 226px;
+    margin-bottom: 60px;
   }
   &__list {
     @extend %list;
@@ -41,7 +54,15 @@
 }
 
 .socials {
-  margin-left: 70px;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    margin-left: 165px;
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
+
   &__title {
     @extend %footer-title;
   }
@@ -71,13 +92,26 @@
   }
 }
 .send-block {
-  margin-left: 93px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 14px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
   &__title {
     @extend %footer-title;
   }
   &__input {
     padding: 15px;
-    min-width: 358px;
+    margin-bottom: 20px;
+    min-width: 450px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      display: block;
+    }
+    @media screen and (min-width: 1200px) {
+      min-width: 358px;
+      margin-bottom: 0;
+    }
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
@@ -94,7 +128,10 @@
     border: none;
     border-radius: 4px;
     padding: 10px 5px;
-    margin-left: 12px;
+    @media screen and (min-width: 1200px) {
+      margin-left: 12px;
+    }
+
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;

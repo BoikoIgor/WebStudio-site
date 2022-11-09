@@ -12,6 +12,10 @@
     @extend %list;
     @media screen and (min-width: 768px) {
       display: flex;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
     }
   }
   &__card {
@@ -19,11 +23,25 @@
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     background-color: $background-color;
-    margin-bottom: 30px;
+    @media screen and (max-width: 767px) {
+      & + & {
+        margin-top: 30px;
+      }
+    }
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: calc((100% - 30px) / 2);
+      &:nth-child(even) {
+        margin-left: 30px;
+      }
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 30px;
+      }
     }
     @media screen and (min-width: 1200px) {
+      flex-wrap: nowrap;
       & + & {
         margin-left: 30px;
       }

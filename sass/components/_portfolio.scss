@@ -101,6 +101,9 @@
   }
   &__link {
     text-decoration: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   &__title {
     margin: 0 auto;
@@ -123,8 +126,7 @@
     padding: 20px 24px;
     border: 1px solid #eeeeee;
     border-top: none;
-    // position: absolute;
-    // top: 0;
+    flex-grow: 1;
   }
   &__card-thumb {
     position: relative;

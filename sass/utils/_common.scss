@@ -4,6 +4,9 @@ body {
   background-color: $background-color;
   color: $primary-text-color;
 }
+body.modal-open {
+  overflow: hidden;
+}
 p,
 h1,
 h2,

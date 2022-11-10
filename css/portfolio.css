@@ -781,9 +781,9 @@ img {
 .portfolio__item:last-child {
   margin-bottom: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio__item {
-    width: calc((100% - 30px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
   }
   .portfolio__item:nth-child(even) {
     margin-left: 30px;
@@ -791,6 +791,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .portfolio__item {
+    margin-left: 0;
     margin-right: 30px;
     flex-basis: calc((100% - 60px) / 3);
   }

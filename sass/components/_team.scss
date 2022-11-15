@@ -50,7 +50,10 @@
   &__content {
     text-align: center;
     line-height: 1.17;
-    padding: 30px 5px;
+    padding: 30px 5px 24px 5px;
+    @media screen and (min-width: 1200px) {
+      padding-bottom: 30px;
+    }
   }
   &__title {
     margin: 0 auto 10px;
@@ -68,14 +71,20 @@
 
 .soc-icons {
   @extend %list;
-  padding: 0 122px;
-  display: flex;
-  margin-top: 16px;
-  @media screen and (min-width: 1200px) {
-    padding-left: 27px;
-    padding-right: 27px;
-  }
+  // padding: 0 122px;
+  // display: flex;
 
+  margin-top: 16px;
+  // @media screen and (min-width: 1200px) {
+  //   padding-left: 27px;
+  //   padding-right: 27px;
+  // }
+  & li {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
   justify-content: space-between;
   &__link {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);

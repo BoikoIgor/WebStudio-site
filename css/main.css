@@ -475,6 +475,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
 .socials__list, .footer__list, .clients__list, .soc-icons, .team__list, .activities__list, .benefits__list, .soc-list, .header__contacts, .header__nav {
@@ -484,6 +485,7 @@ img {
 }
 
 .footer__container, .clients__container, .team__container, .activities__container, .benefits__container, .hero__container, .header__container {
+  width: 100%;
   padding: 0px 15px;
   margin: 0 auto;
 }
@@ -988,7 +990,12 @@ img {
 .team__content {
   text-align: center;
   line-height: 1.17;
-  padding: 30px 5px;
+  padding: 30px 5px 24px 5px;
+}
+@media screen and (min-width: 1200px) {
+  .team__content {
+    padding-bottom: 30px;
+  }
 }
 .team__title {
   margin: 0 auto 10px;
@@ -1004,16 +1011,14 @@ img {
 }
 
 .soc-icons {
-  padding: 0 122px;
-  display: flex;
   margin-top: 16px;
   justify-content: space-between;
 }
-@media screen and (min-width: 1200px) {
-  .soc-icons {
-    padding-left: 27px;
-    padding-right: 27px;
-  }
+.soc-icons li {
+  display: inline-block;
+}
+.soc-icons li:not(:last-child) {
+  margin-right: 10px;
 }
 .soc-icons__link {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1191,7 +1196,7 @@ img {
 .send-block__input {
   padding: 15px;
   margin-bottom: 20px;
-  min-width: 450px;
+  width: 100%;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -1200,6 +1205,11 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+@media screen and (min-width: 480px) {
+  .send-block__input {
+    min-width: 450px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .send-block__input {

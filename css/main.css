@@ -596,28 +596,33 @@ img {
 .header__icon-close {
   display: none;
 }
+.header__icon-close:hover, .header__icon-close:focus {
+  fill: #2196f3;
+}
 .header__menu-btn.is-open .header__icon-close {
   display: block;
 }
 .header__menu-btn.is-open .header__icon-menu {
   display: none;
 }
-.header__menu-container {
-  background-color: #ffffff;
-  height: 100vh;
+@media screen and (max-width: 768px) {
+  .header__menu-container {
+    background-color: #ffffff;
+    height: 100vh;
+  }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) and (max-width: 768px) {
   .header__menu-container {
     padding: 40px 48px;
     text-align: left;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (max-width: 768px) {
   .header__menu-container {
     display: none;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) and (max-width: 768px) {
   .header__menu-container {
     position: absolute;
     top: 0;
@@ -625,10 +630,13 @@ img {
     width: 100%;
   }
   .header__menu-container.is-open {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 768px) {
   .header__menu-container {
     display: flex;
     flex-grow: 1;
@@ -703,11 +711,8 @@ img {
   color: #2196f3;
   fill: #2196f3;
 }
-@media screen and (max-width: 768px) {
-  .header__contacts {
-    display: block;
-    margin-top: 50px;
-  }
+.header__contacts {
+  margin-top: auto;
 }
 @media screen and (min-width: 768px) {
   .header__contacts {
@@ -726,6 +731,15 @@ img {
     margin-left: auto;
   }
 }
+.header__contacts-item {
+  font-size: 34px;
+  color: #2196f3;
+  margin-bottom: 32px;
+}
+.header__contacts-item:last-child {
+  font-size: 24px;
+  color: #757575;
+}
 @media screen and (min-width: 768px) {
   .header__contacts-item + .header__contacts-item {
     margin-top: 10px;
@@ -743,18 +757,28 @@ img {
 }
 .header__contacts-link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
+<<<<<<< Updated upstream
+  font-size: inherit;
+=======
+  font-style: 34px;
+>>>>>>> Stashed changes
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-  color: #757575;
-  fill: #757575;
+  color: inherit;
 }
 .header__contacts-link:hover, .header__contacts-link:focus {
   color: #2196f3;
   fill: #2196f3;
+}
+@media screen and (min-width: 768px) {
+  .header__contacts-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: #757575;
+    fill: #757575;
+  }
 }
 .header__contacts-icon {
   display: none;

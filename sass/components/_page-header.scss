@@ -19,6 +19,10 @@
   }
   &__icon-close {
     display: none;
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+    }
   }
   .header__menu-btn.is-open &__icon-close {
     display: block;
@@ -26,30 +30,38 @@
   .header__menu-btn.is-open &__icon-menu {
     display: none;
   }
-  &__menu-container {
-    background-color: $background-color;
-    height: 100vh;
-    @media screen and (max-width: 767px) {
-      padding: 40px 48px;
-      text-align: left;
-    }
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-    @media screen and (max-width: 767px) {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      &.is-open {
-        display: block;
+  @media screen and (max-width: 768px) {
+    &__menu-container {
+      background-color: $background-color;
+      height: 100vh;
+
+      @media screen and (max-width: 768px) {
+        padding: 40px 48px;
+        text-align: left;
+      }
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+      @media screen and (max-width: 768px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        &.is-open {
+          // display: block;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          flex-grow: 1;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        display: flex;
+        flex-grow: 1;
       }
     }
-    @media screen and (min-width: 768px) {
-      display: flex;
-      flex-grow: 1;
-    }
   }
+
   @media screen and (min-width: 768px) {
     &__menu-btn {
       display: none;
@@ -120,10 +132,8 @@
 
   &__contacts {
     @extend %list;
-    @media screen and (max-width: 768px) {
-      display: block;
-      margin-top: 50px;
-    }
+    margin-top: auto;
+
     @media screen and (min-width: 768px) {
       display: block;
     }
@@ -137,6 +147,13 @@
     }
   }
   &__contacts-item {
+    font-size: 34px;
+    color: $accent-color;
+    margin-bottom: 32px;
+    &:last-child {
+      font-size: 24px;
+      color: $primary-text-color;
+    }
     @media screen and (min-width: 768px) {
       & + & {
         margin-top: 10px;
@@ -154,18 +171,29 @@
 
   &__contacts-link {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding-top: 32px;
-    padding-bottom: 32px;
+
     font-weight: 500;
+<<<<<<< Updated upstream
+    font-size: inherit;
+=======
+    font-style: 34px;
+>>>>>>> Stashed changes
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
-    color: $primary-text-color;
-    fill: $primary-text-color;
+    color: inherit;
+    // fill: $accent-color;
+
     &:hover,
     &:focus {
       color: $accent-color;
       fill: $accent-color;
+    }
+    @media screen and (min-width: 768px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      color: $primary-text-color;
+      fill: $primary-text-color;
     }
   }
 

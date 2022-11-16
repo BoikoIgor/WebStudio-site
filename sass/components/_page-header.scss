@@ -1,5 +1,5 @@
 .header {
-  position: relative;
+  // position: relative;
   border-bottom: 1px solid #ececec;
 
   &__container {
@@ -16,7 +16,11 @@
     border: none;
     background-color: transparent;
     z-index: 1;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
+
   &__icon-close {
     display: none;
   }
@@ -26,6 +30,7 @@
   .header__menu-btn.is-open &__icon-menu {
     display: none;
   }
+<<<<<<< Updated upstream
   &__menu-container {
     background-color: $background-color;
     height: 100vh;
@@ -37,22 +42,42 @@
       display: none;
     }
     @media screen and (max-width: 767px) {
+=======
+
+  &__menu-container {
+    @media screen and (max-width: 768px) {
+      display: none;
+      background-color: $background-color;
+      height: 100vh;
+      padding: 40px 48px;
+      text-align: left;
+>>>>>>> Stashed changes
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       &.is-open {
+<<<<<<< Updated upstream
         display: block;
+=======
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+>>>>>>> Stashed changes
       }
     }
     @media screen and (min-width: 768px) {
       display: flex;
       flex-grow: 1;
+<<<<<<< Updated upstream
     }
   }
   @media screen and (min-width: 768px) {
     &__menu-btn {
       display: none;
+=======
+>>>>>>> Stashed changes
     }
   }
 
@@ -65,20 +90,26 @@
     @media screen and (min-width: 768px) {
       display: flex;
       margin: 0 auto;
+      font-size: 14px;
+      line-height: calc(16 / 14);
+      letter-spacing: 0.02em;
     }
     @media screen and (min-width: 1200px) {
-      margin: 0 0 0 93px;
+      margin-left: 92px;
     }
   }
-  @media screen and (min-width: 768px) {
-    &__item:not(:last-child) {
-      margin-right: 50px;
-    }
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
   }
+
   &__item {
     margin-bottom: 32px;
     letter-spacing: 0.02em;
     &:last-child {
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: 768px) {
       margin-bottom: 0;
     }
   }
@@ -125,35 +156,42 @@
       margin-top: 50px;
     }
     @media screen and (min-width: 768px) {
-      display: block;
+      display: flex;
+      margin-top: 0;
     }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-      padding-top: 21px;
-      padding-bottom: 21px;
+      flex-direction: column-reverse;
+      justify-content: center;
     }
     @media screen and (min-width: 1200px) {
-      display: flex;
+      flex-direction: row-reverse;
       margin-left: auto;
     }
   }
   &__contacts-item {
     @media screen and (min-width: 768px) {
+      font-size: 12px;
+      margin-bottom: 0;
+      &:last-child {
+        font-size: 12px;
+      }
       & + & {
-        margin-top: 10px;
+        margin-bottom: 10px;
       }
     }
     @media screen and (min-width: 1200px) {
       padding-top: 32px;
       padding-bottom: 32px;
       & + & {
-        margin-left: 30px;
-        margin-top: 0;
+        margin-right: 30px;
+        margin-bottom: 0;
       }
     }
   }
 
   &__contacts-link {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+<<<<<<< Updated upstream
     padding-top: 32px;
     padding-bottom: 32px;
     font-weight: 500;
@@ -162,18 +200,41 @@
     text-decoration: none;
     color: $primary-text-color;
     fill: $primary-text-color;
+=======
+    font-weight: 500;
+    font-size: inherit;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: inherit;
+>>>>>>> Stashed changes
     &:hover,
     &:focus {
       color: $accent-color;
       fill: $accent-color;
     }
+<<<<<<< Updated upstream
+=======
+    @media screen and (min-width: 768px) {
+      color: $primary-text-color;
+      fill: $primary-text-color;
+    }
+    @media screen and (min-width: 1200px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+>>>>>>> Stashed changes
   }
 
   &__contacts-icon {
     display: none;
     @media screen and (min-width: 768px) {
-      margin-right: 10px;
+      display: inline-block;
+      margin-right: 8px;
       vertical-align: middle;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 10px;
     }
   }
 }

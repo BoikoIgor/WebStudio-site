@@ -1,28 +1,43 @@
 .hero {
   @extend %centered;
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
   margin: 0 auto;
   background-color: $background-hero-color;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), #2f303a66), url(../images/bg-hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    height: 600px;
+  }
   &__container {
     @extend %container;
-    max-width: 696px;
+    max-width: 360px;
     text-align: center;
-    padding: 200px 0;
+    padding: 118px 0;
+    @media screen and (min-width: 1200px) {
+      max-width: 696px;
+      padding: 200px 0;
+    }
   }
   &__title {
     margin-top: 0;
     margin-bottom: 30px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: calc(42 / 26);
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $second-accent-color;
+    @media screen and (min-width: 1200px) {
+      font-size: 44px;
+      line-height: calc(60 / 44);
+    }
   }
   &__button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -31,7 +46,7 @@
     min-height: 50px;
     border: none;
     border-radius: 4px;
-    padding: 10px 32px;
+    padding: 10px 24px;
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -40,6 +55,9 @@
     background-color: $accent-color;
     color: $second-accent-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    @media screen and (min-width: 1200px) {
+      padding: 10px 32px;
+    }
     &:hover {
       background-color: $third-accent-color;
     }

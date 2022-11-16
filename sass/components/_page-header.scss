@@ -30,6 +30,7 @@
   .header__menu-btn.is-open &__icon-menu {
     display: none;
   }
+<<<<<<< Updated upstream
   @media screen and (max-width: 768px) {
     &__menu-container {
       background-color: $background-color;
@@ -56,10 +57,36 @@
         }
       }
       @media screen and (min-width: 768px) {
+=======
+  &__menu-container {
+    background-color: $background-color;
+    height: 100vh;
+    @media screen and (max-width: 767px) {
+      padding: 40px 48px;
+      text-align: left;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+    @media screen and (max-width: 767px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      &.is-open {
+        display: block;
+>>>>>>> Stashed changes
         display: flex;
         flex-grow: 1;
       }
     }
+<<<<<<< Updated upstream
+=======
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-grow: 1;
+    }
+>>>>>>> Stashed changes
   }
 
   @media screen and (min-width: 768px) {
@@ -171,6 +198,7 @@
 
   &__contacts-link {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+<<<<<<< Updated upstream
 
     font-weight: 500;
 <<<<<<< Updated upstream
@@ -184,17 +212,30 @@
     color: inherit;
     // fill: $accent-color;
 
+=======
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: $primary-text-color;
+    fill: $primary-text-color;
+>>>>>>> Stashed changes
     &:hover,
     &:focus {
       color: $accent-color;
       fill: $accent-color;
     }
+<<<<<<< Updated upstream
     @media screen and (min-width: 768px) {
       padding-top: 32px;
       padding-bottom: 32px;
       color: $primary-text-color;
       fill: $primary-text-color;
     }
+=======
+>>>>>>> Stashed changes
   }
 
   &__contacts-icon {

@@ -76,15 +76,12 @@
   display: flex;
   justify-content: center;
   margin-top: 16px;
-  &__item {
-    margin-left: 20px;
+  &__item + &__item {
+    margin-left: 10px;
   }
   @media screen and (min-width: 1200px) {
     padding-left: 27px;
     padding-right: 27px;
-  }
-  &__item + &__item {
-    margin-left: 10px;
   }
 
   &__link {

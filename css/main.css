@@ -1062,17 +1062,14 @@ img {
   justify-content: center;
   margin-top: 16px;
 }
-.soc-icons__item {
-  margin-left: 20px;
+.soc-icons__item + .soc-icons__item {
+  margin-left: 10px;
 }
 @media screen and (min-width: 1200px) {
   .soc-icons {
     padding-left: 27px;
     padding-right: 27px;
   }
-}
-.soc-icons__item + .soc-icons__item {
-  margin-left: 10px;
 }
 .soc-icons__link {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);

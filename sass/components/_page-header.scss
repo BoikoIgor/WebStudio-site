@@ -32,7 +32,7 @@
   }
 
   &__menu-container {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       display: none;
       background-color: $background-color;
       height: 100vh;
@@ -94,6 +94,9 @@
     line-height: calc(16 / 14);
     text-decoration: none;
     color: $title-text-color;
+    .header__item > &--current {
+      @extend %current;
+    }
     @media screen and (min-width: 768px) {
       display: block;
       padding-top: 32px;
@@ -127,7 +130,7 @@
     @extend %list;
     @media screen and (max-width: 768px) {
       display: block;
-      margin-top: 50px;
+      margin-top: auto;
     }
     @media screen and (min-width: 768px) {
       display: flex;
@@ -143,9 +146,19 @@
     }
   }
   &__contacts-item {
+    font-size: 34px;
+    color: $accent-color;
+    @media screen and (max-width: 767px) {
+      & + & {
+        margin-top: 32px;
+        font-size: 24px;
+        color: $primary-text-color;
+      }
+    }
+
     @media screen and (min-width: 768px) {
       font-size: 12px;
-      margin-bottom: 0;
+      margin: 0;
       &:last-child {
         font-size: 12px;
       }
@@ -225,6 +238,10 @@
   }
   &__link {
     text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    letter-spacing: 0.02em;
     color: $accent-color;
     margin-right: 10px;
   }

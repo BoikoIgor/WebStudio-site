@@ -604,25 +604,6 @@ img {
 .header__menu-btn.is-open .header__icon-menu {
   display: none;
 }
-<<<<<<< Updated upstream
-.header__menu-container {
-  background-color: #ffffff;
-  height: 100vh;
-}
-@media screen and (max-width: 767px) {
-  .header__menu-container {
-    padding: 40px 48px;
-    text-align: left;
-  }
-}
-@media screen and (max-width: 768px) {
-  .header__menu-container {
-    display: none;
-  }
-}
-@media screen and (max-width: 767px) {
-  .header__menu-container {
-=======
 @media screen and (max-width: 768px) {
   .header__menu-container {
     display: none;
@@ -630,14 +611,16 @@ img {
     height: 100vh;
     padding: 40px 48px;
     text-align: left;
->>>>>>> Stashed changes
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
   }
   .header__menu-container.is-open {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
   }
 }
 @media screen and (min-width: 768px) {
@@ -764,25 +747,17 @@ img {
 }
 .header__contacts-link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
-<<<<<<< Updated upstream
-=======
   font-size: inherit;
->>>>>>> Stashed changes
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-  color: #757575;
-  fill: #757575;
+  color: inherit;
 }
 .header__contacts-link:hover, .header__contacts-link:focus {
   color: #2196f3;
   fill: #2196f3;
 }
-<<<<<<< Updated upstream
-=======
 @media screen and (min-width: 768px) {
   .header__contacts-link {
     color: #757575;
@@ -795,7 +770,6 @@ img {
     padding-bottom: 32px;
   }
 }
->>>>>>> Stashed changes
 .header__contacts-icon {
   display: none;
 }

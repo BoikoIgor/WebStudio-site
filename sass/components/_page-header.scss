@@ -30,19 +30,6 @@
   .header__menu-btn.is-open &__icon-menu {
     display: none;
   }
-<<<<<<< Updated upstream
-  &__menu-container {
-    background-color: $background-color;
-    height: 100vh;
-    @media screen and (max-width: 767px) {
-      padding: 40px 48px;
-      text-align: left;
-    }
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-    @media screen and (max-width: 767px) {
-=======
 
   &__menu-container {
     @media screen and (max-width: 768px) {
@@ -51,33 +38,20 @@
       height: 100vh;
       padding: 40px 48px;
       text-align: left;
->>>>>>> Stashed changes
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       &.is-open {
-<<<<<<< Updated upstream
-        display: block;
-=======
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         flex-grow: 1;
->>>>>>> Stashed changes
       }
     }
     @media screen and (min-width: 768px) {
       display: flex;
       flex-grow: 1;
-<<<<<<< Updated upstream
-    }
-  }
-  @media screen and (min-width: 768px) {
-    &__menu-btn {
-      display: none;
-=======
->>>>>>> Stashed changes
     }
   }
 
@@ -191,30 +165,17 @@
 
   &__contacts-link {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-<<<<<<< Updated upstream
-    padding-top: 32px;
-    padding-bottom: 32px;
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    color: $primary-text-color;
-    fill: $primary-text-color;
-=======
     font-weight: 500;
     font-size: inherit;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
     color: inherit;
->>>>>>> Stashed changes
     &:hover,
     &:focus {
       color: $accent-color;
       fill: $accent-color;
     }
-<<<<<<< Updated upstream
-=======
     @media screen and (min-width: 768px) {
       color: $primary-text-color;
       fill: $primary-text-color;
@@ -223,7 +184,6 @@
       padding-top: 32px;
       padding-bottom: 32px;
     }
->>>>>>> Stashed changes
   }
 
   &__contacts-icon {

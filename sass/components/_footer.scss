@@ -109,7 +109,10 @@
   &__input {
     padding: 15px;
     margin-bottom: 20px;
-    min-width: 450px;
+    min-width: 290px;
+    @media screen and (min-width: 480px) {
+      min-width: 450px;
+    }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       display: block;
     }

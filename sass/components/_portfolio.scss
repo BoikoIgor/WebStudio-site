@@ -3,6 +3,10 @@
   &__container {
     @extend %container;
     @extend %centered;
+    z-index: 0;
+    .header__menu-container.is-open > & {
+      position: fixed;
+    }
   }
   &__main-title {
     @extend %section-title;

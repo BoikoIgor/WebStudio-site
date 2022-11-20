@@ -1,5 +1,8 @@
 .header {
   border-bottom: 1px solid #ececec;
+  // position: fixed;
+  // z-index: 1;
+  // background-color: $background-color;
 
   &__container {
     @extend %container;

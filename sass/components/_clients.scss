@@ -17,11 +17,15 @@
   &__card {
     width: calc((100% - 30px) / 2);
     height: 92px;
-    &:nth-child(even) {
-      margin-left: 30px;
-    }
-    &:not(:nth-last-child(-n + 2)) {
-      margin-bottom: 30px;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 767px) {
+      &:nth-child(even) {
+        margin-left: 30px;
+      }
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 30px;
+      }
     }
 
     @media screen and (min-width: 768px) and (max-width: 1200px) {
@@ -46,7 +50,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+
     border: 1px solid $icons-color;
     border-radius: 4px;
     fill: $icons-color;
@@ -58,5 +62,6 @@
   }
   &__svg {
     width: 106px;
+    height: 100%;
   }
 }

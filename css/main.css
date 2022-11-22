@@ -788,6 +788,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .header__contacts-link {
+    font-size: 14px;
     padding-top: 32px;
     padding-bottom: 32px;
   }
@@ -952,7 +953,9 @@ img {
   }
   .benefits__item:nth-child(even) {
     margin-left: 30px;
-    margin-bottom: 30px;
+  }
+  .benefits__item:nth-last-child(-n+2) {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -961,6 +964,8 @@ img {
   }
   .benefits__item + .benefits__item {
     margin-left: 30px;
+  }
+  .benefits__item:nth-last-child(-n+4) {
     margin-bottom: 0;
   }
 }
